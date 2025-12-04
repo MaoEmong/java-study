@@ -150,7 +150,7 @@ public class Employee {
                 System.out.println("직급이 잘못 설정되어있습니다.");
                 return;
             }
-            salary = (int)(salary * 1.1);
+            setSalary((int)(salary * 1.1));
         }
         System.out.println(getName() + position + "에서 "+nextPosition+"로 진급합니다.");
         setPosition(nextPosition);
@@ -158,8 +158,9 @@ public class Employee {
 
     public void paySalary()
     {
+        double bonus = 0;
         System.out.println("[급여 이체 완료] "+getName()+getPosition()+"님께 "+
-                salary+"원이 "+account+" 계좌로 지급되었습니다.");
+                calcYearSalarywithBonus() + "원이 "+account+" 계좌로 지급되었습니다.");
     }
 
 
