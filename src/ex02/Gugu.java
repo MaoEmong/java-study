@@ -3,15 +3,15 @@ package ex02;
 public class Gugu {
     public static void main(String[] args) {
         // 결합 연산자
-        int a = 2;
-        System.out.println(a + " * 1 = " + a * 1);
-        System.out.println(a + " * 2 = " + a * 2);
-        System.out.println(a + " * 3 = " + a * 3);
-        System.out.println(a + " * 4 = " + a * 4);
-        System.out.println(a + " * 5 = " + a * 5);
-        System.out.println(a + " * 6 = " + a * 6);
-        System.out.println(a + " * 7 = " + a * 7);
-        System.out.println(a + " * 8 = " + a * 8);
-        System.out.println(a + " * 9 = " + a * 9);
+        int c = 2;
+        System.out.println(c + " * 1 = " + c * 1);
+        System.out.println(c + " * 2 = " + c * 2);
+        System.out.println(c + " * 3 = " + c * 3);
+        System.out.println(c + " * 4 = " + c * 4);
+        System.out.println(c + " * 5 = " + c * 5);
+        System.out.println(c + " * 6 = " + c * 6);
+        System.out.println(c + " * 7 = " + c * 7);
+        System.out.println(c + " * 8 = " + c * 8);
+        System.out.println(c + " * 9 = " + c * 9);
     }
 }

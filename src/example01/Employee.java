@@ -95,15 +95,15 @@ public class Employee {
     Employee(String name, String phone, String dept, int empNo, int salary, String account, String position) {
         this.name = name;
         this.phone = phone;
-        if(dept.isBlank())
+        if (dept.isBlank())
             dept = "공백";
         this.dept = dept;
         this.empNo = empNo;
         this.salary = salary;
-        if(account.isBlank())
+        if (account.isBlank())
             account = "공백";
         this.account = account;
-        if(position.isBlank())
+        if (position.isBlank())
             position = "공백";
         this.position = position;
 
@@ -116,10 +116,12 @@ public class Employee {
                 " / 사원번호: " + getEmpNo() + " / " + "직급: " + getPosition() +
                 " / 월급: " + getSalary() + " / 계좌: " + getAccount());
     }
+
     // 연봉값 확인
     public int calcYearSalary() {
         return getSalary() * 12;
     }
+
     // 연봉값 확인(보너스 포함)
     public int calcYearSalarywithBonus() {
         int salary = getSalary();
@@ -134,6 +136,7 @@ public class Employee {
 
         return (int) (salary * bonus);
     }
+
     // 승진시키기
     public void promote() {
         String position = getPosition();
@@ -145,22 +148,20 @@ public class Employee {
             if (position.equals("사원")) nextPosition = "대리";
             else if (position.equals("대리")) nextPosition = "과장";
             else if (position.equals("과장")) nextPosition = "부장";
-            else
-            {
+            else {
                 System.out.println("직급이 잘못 설정되어있습니다.");
                 return;
             }
-            setSalary((int)(salary * 1.1));
+            setSalary((int) (salary * 1.1));
         }
-        System.out.println(getName() + position + "에서 "+nextPosition+"로 진급합니다.");
+        System.out.println(getName() + position + "에서 " + nextPosition + "로 진급합니다.");
         setPosition(nextPosition);
     }
 
-    public void paySalary()
-    {
+    public void paySalary() {
         double bonus = 0;
-        System.out.println("[급여 이체 완료] "+getName()+getPosition()+"님께 "+
-                calcYearSalarywithBonus() + "원이 "+account+" 계좌로 지급되었습니다.");
+        System.out.println("[급여 이체 완료] " + getName() + getPosition() + "님께 " +
+                calcYearSalarywithBonus() + "원이 " + account + " 계좌로 지급되었습니다.");
     }
 
 
