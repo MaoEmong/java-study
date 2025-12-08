@@ -1,25 +1,26 @@
 package ex04.game;
 
-public class Zealot extends Protoss {
+public class River extends Protoss {
     String name;
     int hp;
     int attack;
 
-    public Zealot() {
-        name = "질럿";
+    public River() {
+        name = "리버";
         hp = 100;
-        attack = 10;
+        attack = 15;
     }
     void getDamage(int damage)
     {
         hp -= damage;
         if(hp < 0)hp = 0;
     }
-    public Zealot(String name, int hp, int attack) {
+    public River(String name, int hp, int attack) {
         this.name = name;
         this.hp = hp;
         this.attack = attack;
     }
+
 
 
     public String getName() {

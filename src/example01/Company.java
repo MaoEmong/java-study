@@ -23,7 +23,7 @@ public class Company {
     private int selectEmp = -1;
     // 프로그램 동작 여부
     private boolean isRun = false;
-    
+
     // 사원관리 프로그램 시작
     public void systemStart() {
         isRun = true;
@@ -44,10 +44,9 @@ public class Company {
     }
 
     // 더미 데이터 추가
-    public void addDumy()
-    {
+    public void addDumy() {
         // 이름 + 전화번호만 알고있음
-        employees[0] = new Employee("홍길동","010-1111-1111");
+        employees[0] = new Employee("홍길동", "010-1111-1111");
         employees[0].setEmpNo(1001);
         employees[0].setSalary(3000000);
         employees[0].setAccount("111-111-111111");
@@ -144,9 +143,8 @@ public class Company {
     private void employeeListMenu() {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] == null) System.out.println((i + 1) + ". 데이터 없음");
-            else
-            {
-                System.out.print((i+1)+". ");
+            else {
+                System.out.print((i + 1) + ". ");
                 employees[i].printInfo();
             }
         }
@@ -276,23 +274,16 @@ public class Company {
         System.out.println("1. 전체 지급 /2. 돌아가기");
         System.out.print(">> ");
     }
-    private void startPaySalary()
-    {
-        if(Integer.parseInt(input) == 2)
-        {
+
+    private void startPaySalary() {
+        if (Integer.parseInt(input) == 2) {
             System.out.println("메인 메뉴로 돌아갑니다.");
-        }
-        else
-        {
-            for(int i = 0 ; i < employees.length;i++)
-            {
-                if(employees[i] == null)
-                {
-                    System.out.println((i+1)+". 데이터 없음");
-                }
-                else
-                {
-                    System.out.print((i+1)+" ");
+        } else {
+            for (int i = 0; i < employees.length; i++) {
+                if (employees[i] == null) {
+                    System.out.println((i + 1) + ". 데이터 없음");
+                } else {
+                    System.out.print((i + 1) + " ");
                     employees[i].paySalary();
                 }
             }
