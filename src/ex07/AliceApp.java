@@ -48,13 +48,23 @@ class 엘리스 extends 증인 {
         System.out.println("엘리스는 뒤로 이동한다");
     }
 }
+// 객체지향 1원칙
+// 상태는 행위를 통해 변경한다
 
 public class AliceApp {
     public static void main(String[] args) {
+// 1. 초기화
+         증인 c1 = new 모자장수("모자장수");
+         증인 c2 = new 엘리스("엘리스");
+         판사 c3 = new 왕();
+         판사 c4 = new 왕비();
 
-        증인 hat = new 모자장수("모자장수");
-        hat.대답();
-
-
+         // 2. 실행
+        c1.대답();
+        c2.대답();
+        c3.심문();
+        c4.심문();
+        c3.종료();
+        c4.종료();
     }
 }
